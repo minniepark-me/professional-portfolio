@@ -3,7 +3,7 @@
 Welcome to my personal portfolio! This project showcases my journey as an MCA graduate, blending **Full-Stack Web Development** with **Artificial Intelligence**.
 
 ## 🚀 Live Demo
-**Check out the live site here:** [https://minniepark-me.github.io/professional-portfolio/](https://minniepark-me.github.io//megha-prasad-portfolio)
+**Check out the live site here:** [https://minniepark-me.github.io/megha-prasad-portfolio/](https://minniepark-me.github.io//megha-prasad-portfolio)
 
 ## ✨ Key Features
 * **Modern Dark Mode UI:** A sleek, high-contrast interface designed for technical professionals.
