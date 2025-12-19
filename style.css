@@ -349,20 +349,21 @@ h3 { font-size: 1.5rem; }
     display: flex;
     flex-direction: column; /* Stacks projects one after another vertically */
     gap: 40px; /* Space between each horizontal project row */
+    padding: 20px 0;
 }
 
 .project-card {
     background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     border: 1px solid rgba(255, 255, 255, 0.05);
     
     /* This makes every card horizontal */
     display: grid;
     grid-template-columns: 1fr 1.2fr; /* Image takes ~45%, Text takes ~55% */
-    align-items: center;
+    min-height: 350px; /* Ensures the card has a consistent minimum height */
+    width: 100%;
 }
 
 .project-card:hover {
@@ -371,8 +372,10 @@ h3 { font-size: 1.5rem; }
 }
 
 .project-img {
-    height: 100%; /* Ensures the image fills the left side height */
-}
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}   
 
 .project-img img {
     width: 100%;
@@ -381,10 +384,18 @@ h3 { font-size: 1.5rem; }
     display: block;
 }
 
+.project-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically next to image */
+}
+
 /* Mobile Responsiveness: Stack them vertically on small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     .project-card {
-        grid-template-columns: 1fr; /* Stack image on top of text on mobile */
+        grid-template-columns: 1fr;/* Stack image on top of text on mobile */
+        min-height: auto;
     }
     
     .project-img {
