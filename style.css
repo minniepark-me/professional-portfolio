@@ -361,7 +361,16 @@ h3 { font-size: 1.5rem; }
     overflow: hidden;
     position: relative; /* Fixed: prevents overlap issues */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    min-height: 400px;
+    /* ADD THESE THREE LINES TO PREVENT OVERLAP */
+    margin-bottom: 50px; /* Forces a physical gap */
+    clear: both;         /* Forces the element to start on a new line */
+    height: auto;        /* Allows the card to grow with content */
+    width: 100%;
+}
+
+/* Ensure the grid container isn't squashing them */
+.project-grid {
+    display: block; /* Changing from flex to block is safer for lists */
     width: 100%;
 }
 
